@@ -1,0 +1,25 @@
+pipeline {
+agent any 
+
+	stages  {
+
+			stages ('Building') {
+			steps	{
+				echo 'the code will be build into an artifact'
+				}
+				}
+
+			stages ('Artifact archiving') {
+                        steps   {
+                                echo 'the artifact will be uploaded to a artifact repository'
+                                }
+                                }
+
+			stages ('Testing') {
+                        steps   {
+                                echo 'the code will be tested into an artifact'
+                                }
+                                }
+
+		}
+    }
